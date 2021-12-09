@@ -1,5 +1,3 @@
-#![feature(drain_filter)]
-
 const FILE: &str = "data/day3data.txt";
 const WIDTH: usize = 12;
 const COUNT: usize = 1000;
