@@ -1,4 +1,4 @@
-use std::fs;
+use crate::util;
 
 const FILE: &str = "data/day1data.txt";
 
@@ -31,12 +31,10 @@ pub fn part_two() -> i32 {
     count
 }
 
-fn read_file() -> String {
-    fs::read_to_string(FILE).expect("Couldnt Read File")
-}
+
 
 fn get_data() -> Vec<i32> {
-    read_file()
+    util::read_file(FILE)
         .lines()
         .map(|line| line.parse::<i32>().unwrap())
         .collect()
